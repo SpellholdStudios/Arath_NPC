@@ -47,7 +47,7 @@ END
 // Kicked out
 IF ~Global("LK#ArathJoined","LOCALS",1)~ p1
   SAY @2113
-  + ~!Global("chapter","GLOBAL",4) !Global("chapter","GLOBAL",5)~ + @2114 + p1.1
+  + ~!Global("chapter","GLOBAL",%bg2_chapter_4%) !Global("chapter","GLOBAL",%bg2_chapter_5%)~ + @2114 + p1.1
   ++ @2115 + p1.2
   ++ @2116 + p1.3
 END

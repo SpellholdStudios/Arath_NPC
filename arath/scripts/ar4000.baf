@@ -1,0 +1,10 @@
+/* Arath was in party upon transition: he is no longer available for summoning */
+
+IF
+	InPartyAllowDead("Arath")
+	Global("LK#ArathSummoned","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("LK#ArathSummoned","GLOBAL",2)
+		Continue()
+END

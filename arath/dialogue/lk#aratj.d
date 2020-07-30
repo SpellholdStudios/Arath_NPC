@@ -1493,7 +1493,7 @@ IF ~~ a17.6
   ++ @493 +  a17.8
   ++ @494 + a17.9
   ++ @495 + a17.10
-  + ~GlobalLT("chapter","GLOBAL",4)~ + @496 + a17.11
+  + ~GlobalLT("chapter","GLOBAL",%bg2_chapter_4%)~ + @496 + a17.11
 END
 
 IF ~~ a17.7
@@ -2943,12 +2943,12 @@ END
 
 
 // LT8: The fantastical hot-tub and the boringness of death
-IF ~Global("LK#ArathLovetalks","GLOBAL",16) GlobalLT("chapter","GLOBAL",3)~ l8a
+IF ~Global("LK#ArathLovetalks","GLOBAL",16) GlobalLT("chapter","GLOBAL",%bg2_chapter_3%)~ l8a
   SAY @975
   IF ~~ DO ~IncrementGlobal("LK#ArathLovetalks","GLOBAL",1) RealSetGlobalTimer("LK#ArathLovetalkTimer","GLOBAL",3600)~ + l8.1
 END
 
-IF ~Global("LK#ArathLovetalks","GLOBAL",16) GlobalGT("chapter","GLOBAL",2)~ l8b
+IF ~Global("LK#ArathLovetalks","GLOBAL",16) GlobalGT("chapter","GLOBAL",%bg2_chapter_2%)~ l8b
   SAY @976
   IF ~~ DO ~IncrementGlobal("LK#ArathLovetalks","GLOBAL",1) RealSetGlobalTimer("LK#ArathLovetalkTimer","GLOBAL",3600)~ + l8.1
 END
@@ -3786,7 +3786,7 @@ IF ~~ l18.16
   SAY @1283
   = @1284
   = @1285
-  IF ~~ EXIT
+  IF ~~ DO ~SetGlobal("LK#ArathRomanceActive","GLOBAL",2)~ EXIT
 END
 
 IF ~~ l18.17

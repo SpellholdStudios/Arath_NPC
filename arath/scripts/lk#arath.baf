@@ -1049,7 +1049,7 @@ END
 // ****************************
 IF    
     InParty(Myself)
-    GlobalGT("chapter","GLOBAL",5)
+    GlobalGT("chapter","GLOBAL",%bg2_chapter_5%)
     Global("LK#ArathQuest","GLOBAL",0)
 THEN
   RESPONSE #100
@@ -1058,7 +1058,7 @@ THEN
 END
 
 IF
-    GlobalGT("chapter","GLOBAL",5)
+    GlobalGT("chapter","GLOBAL",%bg2_chapter_5%)
     AreaType([CITY])
     InParty(Myself)
     Global("LK#ArathQuest","GLOBAL",1)
@@ -1071,7 +1071,7 @@ THEN
 END
 
 IF
-    GlobalGT("chapter","GLOBAL",5)
+    GlobalGT("chapter","GLOBAL",%bg2_chapter_5%)
     AreaType([CITY])
     InParty(Myself)
     Global("LK#ArathQuest","GLOBAL",2)

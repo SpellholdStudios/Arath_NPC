@@ -305,7 +305,7 @@
 
       <div id="header">
         <h1>Arath NPC</h1>
-        <strong>A Spellhold Studios mod for Baldur's Gate 2: SoA & ToB, BGII:EE</strong>
+        <strong>A Spellhold Studios mod for Baldur's Gate 2: SoA & ToB, BGT, BGII:EE, EET</strong>
         <hr />
         <p class="about">
           Author: K'aeloree
@@ -314,7 +314,7 @@
 
           <a href="http://www.spellholdstudios.net/ie/Arath">Mod Website</a> &#8226;
           <a href="http://www.shsforums.net/forum/624-arath/">Mod Forum</a> &#8226;
-          Version: 3
+          Version: 4
         </p>
         <hr />
         <p class="menu">
@@ -369,7 +369,7 @@
           <p>To uninstall, run <em>"setup-Arath.exe"</em> again and select the uninstall option.</p>
           <h5>Compatibility and Installation Order</h5>
 
-          <p>The Arath NPC mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is only compatible with BGII: ToB and BGII:EE. If you do encounter an error, please contact K'aeloree (kae@spellholdstudios.net) or alternatively post on the <a href="http://www.shsforums.net/forum/608-Arath/">forums</a>.</p>
+          <p>The Arath NPC mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is compatible with BGII: ToB, BGT, BGII:EE, and EET. If you do encounter an error, please contact K'aeloree (kae@spellholdstudios.net) or alternatively post on the <a href="http://www.shsforums.net/forum/608-Arath/">forums</a>.</p>
           <p>Please install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a>.</p>
           <address>
             <span class="footer">Arath NPC &gt; Installation</span> <a href="#top">BACK TO TOP</a>
@@ -486,6 +486,22 @@
 
         <div class="content">
           <h2>Version history</h2>
+          <h6>6th February 2018 - Version 4:</h6>
+          <ul>
+            <li>Fixed instance where romance would not set to committed in the morning after dialogue</li>
+            <li>Removed timer check in the resttalk in an inn to reduce player confusion why it does not trigger aftr Arath just suggested it</li>
+            <li>Arath will no longer refer to Imoen as "his" sister if PC is female (in first Imoen banter)</li>
+            <li>ToB: Summoning via fate spirit will be deactivated if Arath was in the party during ToB transition</li>
+            <li>ToB banter with Jaheira will no longer be started (wrongly) with SoA banter dlg</li>
+            <li>Added "Continue()" to the script block that are patched via EXTEND_TOP</li>
+            <li>Optimized ids patching</li>
+		    <li>Small optimizations in the tp2: use of DECOMPILE_AND_PATCH, removal of unnecessary ToB checks, use of fj_are_structure for area patching</li>
+            <li>PRVZ tis (v2) for the EE games provided</li>
+            <li>Added EET compatibility</li>
+            <li>Added HANDLE_CHARSETS to prepare for possible language versions</li>
+            <li>Added arath.ini with modinfo</li>
+            <li>Updated to WeiDU v246</li>
+          </ul>
           <h6>15th November 2013 - Version 3:</h6>
           <ul>
             <li>Various bugfixes</li>

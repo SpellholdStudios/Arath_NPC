@@ -135,7 +135,7 @@ See("Jaheira")
 !StateCheck("Arath",CD_STATE_NOTVALID)
 CombatCounter(0)
 AreaType(CITY)
-Global("LK#ArathToBJaheira","GLOBAL",0)~ THEN BLK#ARAT j1
+Global("LK#ArathToBJaheira","GLOBAL",0)~ THEN BLK#AR25 j1
   @56
   DO ~SetGlobal("LK#ArathToBJaheira","GLOBAL",1)~
   == BJAHEI25 @57

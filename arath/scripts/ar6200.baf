@@ -11,6 +11,7 @@ THEN
   RESPONSE #100
     SetGlobal("LK#ArathBio","GLOBAL",1)
     TextScreen("LK#ARAT1")
+    Continue()
 END
 
 // Romanced, ascended
@@ -24,6 +25,7 @@ THEN
   RESPONSE #100
     SetGlobal("LK#ArathBio","GLOBAL",1)
     TextScreen("LK#ARAT2")
+    Continue()
 END
 
 // Non-romance
@@ -36,6 +38,7 @@ THEN
   RESPONSE #100
     SetGlobal("LK#ArathBio","GLOBAL",1)
     TextScreen("LK#ARAT3")
+    Continue()
 END
 
 

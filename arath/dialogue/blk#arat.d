@@ -767,7 +767,7 @@ See("Viconia")
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 !StateCheck("Arath",CD_STATE_NOTVALID)
 CombatCounter(0)
-Global("chapter","GLOBAL",5)
+Global("chapter","GLOBAL",%bg2_chapter_5%)
 Global("LK#ArathViconiaUD","GLOBAL",0)~ THEN BLK#ARAT vc4
   @333
   DO ~SetGlobal("LK#ArathViconiaUD","GLOBAL",1)~

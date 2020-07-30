@@ -5,7 +5,7 @@ IF
     OR(2)
       Global("LK#ArathRomanceActive","GLOBAL",1)
       Global("LK#ArathRomanceActive","GLOBAL",2)
-    RealGlobalTimerExpired("LK#ArathLovetalkTimer","GLOBAL")
+//    RealGlobalTimerExpired("LK#ArathLovetalkTimer","GLOBAL")
     RealGlobalTimerExpired("LK#ArathBreakTimer","GLOBAL")
     OR(11)
       AreaCheck("AR0021") //City Gates - Crooked Crane 1st floor
