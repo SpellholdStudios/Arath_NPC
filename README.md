@@ -17,7 +17,7 @@
 
 
 <div align="center">
-<a href="#intro">Overview</a> &#8226; <a href="#credits">Credits and Copyright Information</a></br>
+<a href="#intro">Overview</a> &#8226; <a href="#credits">Copyright Information</a></br>
 </div>
 
 <hr>
@@ -50,9 +50,7 @@ Arath features:
 
 
 
-## <a name="credits" id="credits"></a>Credits and Copyright Information
-
-Pick what you think insightful:
+## <a name="credits" id="credits"></a>Copyright Information
 
 ###### ARATH NPC Mod is not developed, supported, or endorsed by BioWare&trade; or Interplay/BlackIsle, Overhaul, Beamdog or the Wizards of the Coast. It was developed by AUTHOR, based on material from the game Baldur's Gate II and its expansion.
 ###### All mod content is &copy;Kaeloree.
