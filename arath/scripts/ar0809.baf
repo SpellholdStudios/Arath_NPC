@@ -1,0 +1,10 @@
+// Appended to Bodhi's lair to spawn Vamp!Arath
+
+IF
+  Global("LK#ArathVampire","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathVampire","GLOBAL",2)
+    CreateCreature("lk#arvmp",[1473.332],2)
+    Continue()
+END

@@ -1,0 +1,19 @@
+IF
+    InParty("Arath")
+    IsOverMe(Player1)
+    IsOverMe("Arath")
+    Global("LK#ArathCCTrig2","AR0405",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathCCTrig2","AR0405",1)
+END
+
+IF
+    InParty("Arath")
+    IsOverMe(Player1)
+    IsOverMe("Arath")
+    Global("LK#ArathQuest","GLOBAL",6)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathQuest","GLOBAL",7)
+END

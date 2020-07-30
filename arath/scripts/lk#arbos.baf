@@ -1,0 +1,16 @@
+IF
+    InParty("Arath")
+    See(Player1)
+    Global("LK#ArathQuest","GLOBAL",8)
+THEN
+  RESPONSE #100
+    Dialogue(Player1)
+END
+
+IF
+    HPPercentLT(Myself,30)
+    Global("LK#ArathQuest","GLOBAL",9)
+THEN
+  RESPONSE #100
+    Dialogue(Player1)
+END

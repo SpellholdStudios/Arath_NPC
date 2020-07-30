@@ -1,0 +1,36 @@
+// Populate dungeon
+IF
+    Global("LK#AR2_populate","LK#AR2",0)
+THEN
+  RESPONSE #100
+// Bottom right - slavers
+    CreateCreature("LK#ARGD1",[1694.835],3)
+    CreateCreature("LK#ARGD1",[1823.853],5)
+    CreateCreature("LK#ARGD2",[1772.885],8)
+    CreateCreature("LK#ARGD3",[1695.915],8)
+// top right - slaves
+    CreateCreature("LK#ARSLV",[2069.144],13)
+    CreateCreature("LK#ARSLV",[1992.215],6)
+    CreateCreature("LK#ARGD1",[1983.245],3)
+// top left
+    CreateCreature("LK#ARSLV",[243.248],10)
+    CreateCreature("LK#ARSLV",[184.278],0)
+    CreateCreature("LK#ARGD1",[411.237],5)
+    CreateCreature("LK#ARGD4",[180.287],3)
+// bottom left
+    CreateCreature("LK#ARSLV",[187.1414],10)
+    CreateCreature("LK#ARSLV",[424.1682],0)
+    CreateCreature("LK#ARGD2",[261.1727],5)
+    CreateCreature("LK#ARGD3",[341.1781],3)
+    CreateCreature("LK#ARGD1",[270.1873],3)
+// boss fight
+    CreateCreature("LK#ARGD1",[499.679],10)
+    CreateCreature("LK#ARGD4",[323.685],0)
+    CreateCreature("LK#ARGD2",[521.879],5)
+    CreateCreature("LK#ARGD3",[531.746],3)
+    CreateCreature("LK#ARGD1",[319.753],3)
+    CreateCreature("LK#ARGD3",[440.716],5)
+    CreateCreature("LK#ARGD4",[256.813],8)
+    CreateCreature("LK#ARBOS",[585.852],5)
+    SetGlobal("LK#AR2_populate","LK#AR2",1)
+END

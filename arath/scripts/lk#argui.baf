@@ -1,0 +1,7 @@
+IF
+    Global("timetogo","LOCALS",1)
+    AreaCheck("LK#AR1")
+THEN
+  RESPONSE #100
+    Dialogue(Player1)
+END

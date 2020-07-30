@@ -1,0 +1,8 @@
+IF
+  Global("LK#ArathQuest","GLOBAL",3)
+  Global("LK#ArathWreiExists","AR1901",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathWreiExists","AR1901",1)
+    CreateCreature("lk#arwre",[1000.695],2)
+END

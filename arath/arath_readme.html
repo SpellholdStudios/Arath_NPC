@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <style type="text/css">
+    /*<![CDATA[*/
+    <!-- 
+      body {
+        margin: 0;
+        padding: 0;
+        cursor: default;
+        text-align: center;
+        color: #000;
+        background: #e3e3db url('http://spellholdstudios.net/images/sh_bg_main.jpg');
+      }
+      
+      #wrap {
+        text-align: left;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 88%;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        font-size: 12px;
+        color: #333;
+      }
+      
+      #header {
+        text-align: center;
+        background: #e5e5e5;
+        border: 1px solid #781808;
+        border-top: 5px solid #781808;
+        border-bottom: 5px solid #781808;
+        padding: 5px 0 13px 0;
+      }
+      
+      #header .about {
+        margin: 7px 0 0 0;
+        padding: 0;
+        font-style: italic;
+        color: #555;
+      }
+      
+      #header .menu {
+        font-weight: bold;
+        margin: 0;
+        color: #999;
+      }
+      
+      #header .menu a:link,
+      #header .menu a:visited {
+        color: #333;
+      }
+      
+      #maindiv {
+        margin: 0 auto;
+        margin-top: -20px;
+        width: 80%;
+      }
+      
+      #maindiv .content {
+        counter-increment: kman;
+        counter-reset: h2;
+        background-color: #e8e8e6;
+        padding: 0 0 25px 0;
+        margin: 50px auto;
+        border-width: 1px 1px 4px 10px;
+        border-style: solid;
+        border-color: #781808;
+        position: relative;
+        display: block;
+      }
+      
+      #maindiv .content::before {
+        content: counter(kman, lower-roman);
+        font-size: 100%;
+        font-weight: bold;
+        text-align: center;
+        color: #eee;
+        background-color: #781808;
+        width: 35px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+      }
+      
+      h2 {
+        display: block;
+        font-family: Verdana, Trebuchet MS, Arial, serif;
+        text-align: left;
+        text-indent: 30px;
+        padding: 0px;
+        margin: 20px 0 0 0;
+        border-bottom: dotted 2px #d0d0d0;
+        border-top: dotted 2px #d0d0d0;
+        background: #deded9;
+        font-size: 160%;
+      }
+      
+      h2::first-letter {
+        color: #781808;
+        background-color: transparent;
+      }
+      
+      #maindiv p {
+        font-size: 100%;
+        font-style: normal;
+        line-height: 150%;
+        padding: 0px;
+        margin: 10px auto;
+        width: 90%;
+        display: block;
+      }
+      
+      #maindiv address a:link,
+      #maindiv address a:visited {
+        font-weight: bold;
+        text-decoration: underline;
+        background-color: transparent;
+        color: #eaeaea !important;
+        padding-right: 5px;
+        padding-left: 6px;
+      }
+      
+      #maindiv address a:focus,
+      #maindiv address a:hover {
+        text-decoration: none;
+        color: #F1F1F1;
+        border: 0;
+      }
+      
+      #maindiv address a:active {
+        color: #fff;
+        text-decoration: line-through;
+        border: none;
+      }
+      
+      #maindiv address {
+        font-size: 95%;
+        font-style: normal;
+        font-weight: bold;
+        text-decoration: none;
+        color: #BBB;
+        background-color: #781808;
+        padding: 3px 0px 0px;
+        margin: 0px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        display: block;
+        text-align: right;
+      }
+      
+      #maindiv .important {
+        font-size: 95%;
+        font-family: Verdana;
+        text-align: left;
+        background-color: #F1F1F1;
+        border-top: solid 1px #aaa;
+        border-bottom: solid 1px #aaa;
+        border-left: solid 6px #aaa;
+        border-right: solid 6px #aaa;
+        padding: 10px;
+        margin: 20px auto;
+        width: 80%;
+        line-height: 160%;
+      }
+      
+      #maindiv .important::before {
+        display: none;
+      }
+      
+      #maindiv .important p {
+        font-size: 100%;
+        text-indent: 0px;
+        margin: 5px 0 10px 0;
+      }
+      
+      #maindiv ul {
+        margin: -10px 0 0 30px;
+        *margin-left: 65px;
+      }
+      
+      #maindiv ol {
+        margin: -10px 0 0 35px;
+        *margin-left: 70px;
+      }
+      
+      #maindiv .important ul {
+        margin: -10px 0 0 15px;
+      }
+      
+      #maindiv .important ol {
+        margin: -10px 0 0 20px;
+      }
+      
+      #maindiv ul li {
+        list-style-type: square;
+        line-height: 150%;
+      }
+      
+      #maindiv ol li {
+        line-height: 150%;
+      }
+      
+      .t1 {
+        font-weight: bold;
+        width: 26%;
+        text-align: right;
+        clear: right;
+        float: left;
+        *float: none;
+        *margin-left: 65px;
+        line-height: 22px;
+      }
+      
+      .t2 {
+        text-align: left;
+        width: 73%;
+        float: right;
+        *float: none;
+        line-height: 22px;
+      }
+      
+      hr {
+        margin: 10px 0 10px 0;
+        padding: 0;
+        height: 1px;
+        border: 0;
+        color: #aaa;
+        background-color: #aaa;
+      }
+      
+      hr.floatfix {
+        clear: both;
+        color: #e8e8e6;
+        background-color: #e8e8e6;
+        *margin: 0;
+        *padding: 0;
+      }
+      
+      h1 {
+        font-size: 225%;
+        color: #444;
+        padding: 5px 0 5px 0;
+        margin: 0;
+        width: 100%;
+      }
+      
+      h3,
+      h4,
+      h5 {
+        margin: 10px 40px 10px 40px;
+        padding: 0;
+      }
+      
+      h3 {
+        font-size: 125%;
+        font-style: italic;
+      }
+      
+      h4 {
+        font-size: 125%;
+      }
+      
+      h5 {
+        font-size: 100%;
+      }
+      
+      h6 {
+        width: 100%;
+        margin: 10px 0 15px 0;
+        background-color: #ECECEC;
+        text-align: left;
+        text-indent: 30px;
+        font-size: 100%;
+        font-style: italic;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border-bottom: solid 1px #bbb;
+        border-top: solid 1px #bbb;
+      }
+      
+      a:link,
+      a:visited {
+        color: #781808;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:active {
+        color: #222;
+        border-bottom: 1px solid black;
+      }
+
+    -->
+    /*]]>*/
+    </style>
+    <title>SPELLHOLD STUDIOS - Arath NPC</title>
+  </head>
+  <body>
+    <a name="top" id="top"></a>
+    <div id="wrap">
+
+      <div id="header">
+        <h1>Arath NPC</h1>
+        <strong>A Spellhold Studios mod for Baldur's Gate 2: SoA & ToB, BGII:EE</strong>
+        <hr />
+        <p class="about">
+          Author: K'aeloree
+        </p>
+        <p class="about">
+
+          <a href="http://www.spellholdstudios.net/ie/Arath">Mod Website</a> &#8226;
+          <a href="http://www.shsforums.net/forum/624-arath/">Mod Forum</a> &#8226;
+          Version: 3
+        </p>
+        <hr />
+        <p class="menu">
+          <a href="#intro">Introduction</a> &middot;
+          <a href="#installation">Installation</a> &middot;
+          <a href="#info">Mod Details</a> &middot;
+          <a href="#romance">Romance guide</a> &middot;
+          <a href="#faq">FAQ</a> &middot;
+          <a href="#credits">Credits</a> &middot;
+          <a href="#version">Version History</a>
+        </p>
+
+      </div>
+      <div id="maindiv">
+
+        <!-- ================== I n t r o d u c t i o n ================== -->
+        <a name="intro" id="intro"></a>
+        <div class="content">
+          <h2>Introduction</h2>
+
+          <p>Arath is a very complex, self-assured, humorous and hedonistic druid who cares for little else beyond himself and his love for nature. He loves the human form, both male and female, and isn't afraid to be direct about what he wants -- though he's not always successful in gettin git, much to his chagrin. He has a passionate hate for aberrations, the undead and anything else that falls beyond the natural scheme of things, and he has some rather complex and occasionally contradictory beliefs.</p>
+
+          <p>Arath includes both friendship and romance dialogues throughout SoA & TOB.</p>
+          
+          <p>Arath features:</p>
+          <ul>
+            <li>an opinionated, quirky new Druid NPC </li>
+            <li>many banters with BioWare NPCs (3+ throughout SoA/ToB)</li>
+            <li>many talks on a variety of in-game plots and ideas</li>
+            <li>commentary throughout the game on the PC's quest</li>
+            <li>joins during the slaver line of quests in Chapter 2</li>
+            <li>a new quest in late SoA</li>
+            <li>a unique romance spanning SoA and ToB</li>
+            <li>an extensive friendship with any PC not romancing him</li>
+            <li>original portrait by Lady Lesatho</li>
+            <li>original music by theacefes</li>
+          </ul>
+
+          <p>Visit the <a href="http://www.spellholdstudios.net/ie/arath">website</a> or <a href="http://www.shsforums.net/forum/624-arath/">forum</a> for all the latest updates.</p>
+          <address>
+            <span class="footer">Arath NPC &gt; Introduction</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== I n s t a l l a t i o n ================== -->
+        <a name="installation" id="installation"></a>
+        <div class="content">
+          <h2>Installation</h2>
+          <h5>PC</h5>
+
+          <p>The Arath NPC is a WeiDU mod, packaged in an extractable .RAR archive. Simply unrar <em>"arath_v3.rar"</em> (<a href="http://www.rarlabs.com">WinRAR</a>) into your Baldur's Gate II directory and run <em>"setup-Arath.exe"</em>.
+          <p>To uninstall, run <em>"setup-Arath.exe"</em> again and select the uninstall option.</p>
+          <h5>Compatibility and Installation Order</h5>
+
+          <p>The Arath NPC mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is only compatible with BGII: ToB and BGII:EE. If you do encounter an error, please contact K'aeloree (kae@spellholdstudios.net) or alternatively post on the <a href="http://www.shsforums.net/forum/608-Arath/">forums</a>.</p>
+          <p>Please install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a>.</p>
+          <address>
+            <span class="footer">Arath NPC &gt; Installation</span> <a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+        
+        <!-- ================== D e t a i l s ================== -->
+        <a name="info" id="info"></a>
+        <div class="content">
+          <h2>Mod Details</h2>
+          <h5>Statistics</h5>
+          <p><strong>STR:</strong> 13<br />
+          <strong>DEX:</strong> 11<br />
+          <strong>CON:</strong> 13<br />
+          <strong>INT:</strong> 13<br />
+          <strong>WIS:</strong> 16<br />
+          <strong>CHA:</strong> 15</p>
+
+          <h5>Biography</h5>
+          <p>When asked about his past, ARATH smiles and artfully avoids the question. From what you can gather, he was born in Athkatla, the son of a wealthy nobleman, and grew up in relative peace until he discovered his father's ties to the slave trade. Furious at his father's involvement in people-trafficking, he ran away, eventually joining the local Druid Grove and studying to become a druid himself. Arath is quick both on his feet and in his speech, words tumbling out often before he can finish the last, and has a marked appreciation for the beauty of nature. Though he is in his mid-twenties, he exudes a confidence and charisma of one far older than his years would suggest. His eyes sparkle as you probe him with questions, but he does not answer your questions, saying only that he feels no need to recount the past when the present is so much more interesting.</p>
+
+          <h5>Talk information</h5>
+          <p>Arath is quite a talkative NPC. He has a total of 22 PC dialogues throughout SoA and ToB (18 in SoA, 4 in ToB), as well as a number of comments and interjections. He will banter with each NPC approximately two times in SoA, and once in ToB.</p>
+          
+          
+          <h5>Important notes</h5>
+
+          <p>The majority of Arath's non-romantic content is situation based, and he will comment extensively on many quests throughout the game. Feel free to slap him around a little; he's a big boy, he can take it.</p>
+
+          <p>If he hasn't spoken in a while, don't worry about it. He'll pipe up soon enough as you progress through the game.</p>
+          <address>
+            <span class="footer">Arath NPC &gt; Mod Details</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+
+        <!-- ================== R o m a n c e ================== -->
+        <a name="romance" id="romance"></a>
+        <div class="content">
+          <h2>Romance Guide</h2>
+
+          <h5>Conditions</h5>
+          <p>Arath will romance elven, human or half-elven PCs of any alignment and any gender with a Charisma of 12+.</p>
+
+          <h5>Pre-Spellhold</h5>
+          <p>Arath's romance is separated into pre-Spellhold and post-Spellhold talks. There are two conditional talks in the pre-Spellhold talks. These are talk 4 (sleep in an inn), talk 5 (must be in Athkatla). Apart from those talks, the romance is relatively straight-forward. It begins after an initial round of (4) talks discussing the player's Bhaalspawn heritage.</p>
+
+          <h5>Post-Spellhold</h5>
+          <p>After Spellhold, the romance becomes slightly more complex. But fear not! Even when things look dark, keep going. Talk 18 requires you to sleep. The SoA romance ends with a gift.</p>
+
+          <address>
+            <span class="footer">Arath NPC &gt; Mod Details</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== F A Q ================== -->
+        <a name="faq" id="faq"></a>
+        <div class="content">
+          <h2>Frequently Asked Questions</h2>
+          <p><strong>Q: Where do I pick him up?</strong><br /> A: Pick him up near the Fighting Pits in the back of the Copper Coronet before starting the Slaver line of quests.</p>
+          <p><strong>Q: Much much does he talk throughout the game?</strong><br /> A: Arath has many different talks throughout the game, which more than doubles if you decide to romance him, for a total of over 40 talks.</p>
+          <p><strong>Q: Does he have a quest?</strong><br /> A: Arath's quest will begin soon after you exit the Underdark in Chapter 6.<p>
+          <p><strong>Q: Is a soundset on the way?</strong><br /> A: Voicing was not a priority in getting the mod released, however, once the right voice actor is found he will most definitely be voiced in a future version!</p>
+          <p><strong>Q: How rude can I be to him?</strong><br /> A: Feel free to bully him. But a word of warning: he gives as good as he gets!</p>
+          <p><strong>Q: Does he have any major arguments with other NPCs?</strong><br /> A: Arath does not get along with a variety of NPCs, but will not come to blows with any of them.</p>
+          <p><strong>Q: Have you got any plans to expand the mod or add new dialogues?</strong><br /> A: Absolutely! After ToB has been written, there are plans to add both voicing and player initiated dialogue.</p>
+          <p><strong>Q: Speaking of which, where are they?!</strong><br /> A: Due to time constraints, PID had to be cut from the initial release. It will definitely make it into a future release!</p>
+          <p><strong>Q: I've got an idea for something I think you should add!</strong><br /> A: Great! Send your idea to me and I'd be happy to see what I can do.</p>
+          <p><strong>Q: I'd like to translate Arath into another language, can you TRAify the mod?</strong><br /> A: I generally leave the first few releases of a mod un-TRAified because dialogue errors are easier to spot that way, but if you really want to translate the mod I'd be happy to TRAify it. Just let me know.</p>
+          <p><strong>Q: Crossmod?</strong><br /> A:  Crossmod will definitely be added in future versions.</p>
+          <p><strong>Q: Can I write crossmod with Arath?</strong><br /> A: Sure, like all of my NPCs Arath is free for anyone to write crossmod with--you don't need my permission to do so or anything ridiculous like that. If you'd like me to check over your banter(s), I'd be happy to.</p>
+          <address>
+            <span class="footer">Arath NPC &gt; FAQ</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== C r e d i t s ================== -->
+        <a name="credits" id="credits"></a>
+        <div class="content">
+
+          <h2>Credits</h2>
+          <p>Thank you to all of the people over the years who've suffered through me talking to them about Arath, especially SConrad, Deva, Riviera, berelinde, Bookwyrme, Tameon the Dragoon, MiLeah, Lava Del'Vortel, Crazee, Rhaella, Stnemele and Choo Choo!</p>
+          <span class="t1">Author:</span> <span class="t2">K'aeloree</span><br />
+          <span class="t1">Coder:</span> <span class="t2">K'aeloree</span><br />
+          <span class="t1">Proofreaders:</span> <span class="t2">Stnemele, RavenBlack, Choo Choo, Rhaella, Allahandra, Lupatria</span><br />
+          <span class="t1">ToB Testers:</span> <span class="t2">Lady Lesatho</span><br />
+          <span class="t1">Portrait:</span> <span class="t2">IceDragon, BGII-addicted, AmyAE</span><br />
+          <span class="t1">Music:</span> <span class="t2">Kat "theacefes" Bella</span><br />
+          <hr class="floatfix" />
+          <h5>Programs/tools used in creation:</h5><br />
+          <ul>
+            <li><a href="http://www.weidu.org">WeiDU</a>, by Westley Weimer/Valerio Bigiani (the bigg)</li>
+            <li><a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a>, by Jon Olav Hauglid</li>
+            <li><a href="http://www.shsforums.net/topic/31285-infinity-explorer-v085/">Infinity Explorer</a>, by Dmitry Jemerov/bigmoshi</li>
+            <li><a href="http://www.rarlab.com/">WinRAR</a>, by Eugene Roshal/Alexander Roshal</li>
+            <li><a href="http://iesdp.gibberlings3.net">IESDP</a>, maintained by igi</li>
+          </ul>
+          <h5>Copyright Notice:</h5>
+          <div class="important">
+            <p>The Arath NPC was developed by K'aeloree, based on material from the game Baldur's Gate II and its expansion.</p>
+
+            <p>All mod content is &copy; K'aeloree.</p>
+            <p>Baldur's Gate II: Shadows of Amn and Baldur's Gate II: Throne of Bhaal &copy; TSR, Inc. The BioWare Infinity Engine is &copy; BioWare Corp.</p>
+            <p>Please note that any and all redistribution and/or hosting of this mod is expressly unwanted without permission from the author(s).</p>
+          </div>
+
+          <address>
+            <span class="footer">Arath NPC &gt; Credits</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== V e r s i o n   H i s t o r y ================== -->
+        <a name="version" id="version"></a>
+
+        <div class="content">
+          <h2>Version history</h2>
+          <h6>15th November 2013 - Version 3:</h6>
+          <ul>
+            <li>Various bugfixes</li>
+            <li>Added BGII:EE compatibility</li>
+            <li>Moved audio to new HANDLE_AUDIO</li>
+          </ul>
+          <h6>22nd January 2013 - Version 2.1:</h6>
+          <ul>
+            <li>Fixed repeating dialogue in joining quest</li>
+            <li>Fixed Arath's proficiency points</li>
+            <li>Fixed Aerie/Arath romance conflict banter to only trigger for men</li>
+            <li>Fixed death dialogues to not trigger immediately after one another</li>
+            <li>Added backup break script to ensure talk breaks work correctly</li>
+          </ul>
+          <h6>2nd January 2013 - Version 2:</h6>
+          <ul>
+            <li>ToB content added</li>
+            <li>Several minor SoA bugs fixed</li>
+          </ul>
+          <h6>28th April 2012 - Version 1.1:</h6>
+          <ul>
+            <li>Several small bugs fixed</li>
+            <li>Fixed first lovetalk so it now works for multi-and-duel classes</li>
+          </ul>
+          <h6>14 February 2012 - Version 1.0:</h6>
+          <ul>
+            <li>Initial release</li>
+          </ul>
+          <address>
+            <span class="footer">Arath NPC &gt; Version History</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+      </div>
+    </div>
+  </body>
+
+</html>

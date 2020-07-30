@@ -1,0 +1,9 @@
+IF
+  Global("LK#ArathGuide","GLOBAL",1)
+  Global("LK#ArathGuideExists","AR1900",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathGuideExists","AR1900",1)
+    CreateCreature("lk#argui",[1350.655],2)
+    ActionOverride("lk#argui",MakeGlobal())
+END

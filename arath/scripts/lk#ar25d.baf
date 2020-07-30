@@ -1,0 +1,15 @@
+// Lovetalk 4
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("LK#ArathRomanceActive","GLOBAL",2)
+    RealGlobalTimerExpired("LK#ArathToBRomanceTimer","GLOBAL")
+    Global("LK#ArathToBLovetalks","GLOBAL",7)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathToBLovetalks","GLOBAL",8)
+    PlaySong(0)
+    PlaySound("lk#arrom")
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END

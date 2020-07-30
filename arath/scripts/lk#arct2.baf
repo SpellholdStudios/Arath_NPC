@@ -1,0 +1,10 @@
+IF
+    True()
+THEN
+  RESPONSE #100
+    CutSceneId("lk#arwre")
+    ReallyForceSpellRES("lk#arspl",Player1)
+    Wait(3)
+    Dialogue(Player1)
+    EndCutSceneMode()
+END

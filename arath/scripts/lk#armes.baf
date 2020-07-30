@@ -1,0 +1,14 @@
+IF
+    Global("LK#ArathQuest","GLOBAL",2)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+IF
+    GlobalGT("LK#ArathQuest","GLOBAL",2)
+THEN
+  RESPONSE #100
+    DestroySelf()
+END

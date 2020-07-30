@@ -1,0 +1,28 @@
+IF
+    Allegiance(Myself,[Enemy])
+    Global("LK#AR1_enemy","LK#AR1",0)
+    !Global("LK#AR1_talk","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ChangeEnemyAlly(Myself,NEUTRAL)
+    ActionOverride("LK#ARGD2",ChangeEnemyAlly(Myself,NEUTRAL))
+    SetGlobal("LK#AR1_enemy","LK#AR1",1)
+END
+
+IF
+    See(Player1)
+    Range(Player1,30)
+    !Global("LK#AR1_talk","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Dialogue(Player1)
+END
+
+IF 
+    Global("LK#AR2_attack","LK#AR2",1)
+    Global("attack","LOCALS",0)
+THEN
+  RESPONSE #100
+    Enemy()
+    SetGlobal("attack","LOCALS",1)
+END

@@ -1,0 +1,32 @@
+IF
+    Global("CleanseVampire","AR1401",2)
+    Global("LK#ArathVampire","GLOBAL",3)
+    Name("Arath",Myself)
+    AreaCheck("AR1401")
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathVampire","GLOBAL",4)
+    DialogInterrupt(TRUE)
+    ChangeAIScript("lk#arath",OVERRIDE)
+END
+
+IF
+    Global("LK#ArathVampire","GLOBAL",1)
+    Global("RomanceVampire","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("RomanceVampire","GLOBAL",1)
+    Continue()
+END
+
+IF
+    Global("LK#ArathVampire","GLOBAL",1)
+    Global("RomanceVampire","GLOBAL",1)
+    Global("RomanceVampireTeleport","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("RomanceVampireTeleport","GLOBAL",1)
+    CreateVisualEffectObject("SPDIMNDR",Myself)
+    Wait(2)
+    DestroySelf()
+END

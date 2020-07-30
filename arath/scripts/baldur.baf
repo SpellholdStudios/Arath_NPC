@@ -1,0 +1,18 @@
+IF
+    Dead("Arath")
+    Global("LK#ArathRaised","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathRaised","GLOBAL",1)
+    RealSetGlobalTimer("LK#ArathRaisedTimerThing","GLOBAL",300)
+END
+
+IF
+    Dead("Arath")
+    RealGlobalTimerExpired("LK#ArathRaisedTimerThing","GLOBAL")
+    Global("LK#ArathRaised","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathRaised","GLOBAL",3)
+END
+

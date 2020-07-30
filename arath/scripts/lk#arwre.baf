@@ -1,0 +1,9 @@
+IF
+    Global("LK#ArathQuest","GLOBAL",3)
+    InParty("Arath")
+    See(Player1)
+    Range(Player1,30)
+THEN
+  RESPONSE #100
+    Dialogue(Player1)
+END

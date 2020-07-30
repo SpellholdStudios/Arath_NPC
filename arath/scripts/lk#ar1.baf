@@ -1,0 +1,10 @@
+// Populate dungeon
+IF
+    Global("LK#AR1_populate","LK#AR1",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#AR1_populate","LK#AR1",1)
+    CreateCreature("LK#ARGD1",[900.450],3)
+    CreateCreature("LK#ARGD2",[930.390],8)
+    CreateCreature("LK#ARSLV",[990.430],5)
+END               

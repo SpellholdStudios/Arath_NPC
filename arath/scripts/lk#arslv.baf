@@ -1,0 +1,49 @@
+IF
+    Dead("LK#ARGD1")
+    Dead("LK#ARGD2")
+    See(Player1)
+    Range(Player1,30)
+    !Global("LK#AR1_talk","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Dialogue(Player1)
+END
+
+IF 
+    Global("LK#ArathQuest_slavesescape","GLOBAL",1)
+    !See("LK#ARGD1")
+    !See("LK#ARGD2")
+    !See("LK#ARGD3")
+    !See("LK#ARGD4")
+    See(Player1)
+    Global("action","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("action","LOCALS",1)
+    MoveToPoint([2273.1610])
+    DestroySelf()
+END
+
+IF
+    Global("LK#ArathQuest_slavesfight","GLOBAL",1)
+    Global("action","LOCALS",0)
+    See(Player1)
+THEN
+  RESPONSE #50
+    SetGlobal("action","LOCALS",1)
+    MoveToPoint([2273.1610])
+    DestroySelf()
+  RESPONSE #50
+    SetGlobal("action","LOCALS",1)
+    ChangeEnemyAlly(Myself,ALLY)
+END
+
+IF 
+    HPPercentLT(Myself,50)
+    Global("action","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("action","LOCALS",2)
+    MoveToPoint([2273.1610])
+    DestroySelf()
+END

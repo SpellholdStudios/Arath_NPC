@@ -1,0 +1,8 @@
+IF
+    Global("LK#AR2_attack","LK#AR2",1)
+    Global("attack","LOCALS",0)
+THEN
+  RESPONSE #100
+    Enemy()
+    SetGlobal("attack","LOCALS",1)
+END

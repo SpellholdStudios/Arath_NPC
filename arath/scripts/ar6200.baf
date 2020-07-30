@@ -1,0 +1,41 @@
+// Arath epilogues
+
+// Romanced, didn't ascend
+IF
+  Global("StartEndBios","AR6200",1)
+  InParty("Arath")
+  Global("LK#ArathBio","GLOBAL",0)
+  Global("LK#ArathRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathBio","GLOBAL",1)
+    TextScreen("LK#ARAT1")
+END
+
+// Romanced, ascended
+IF
+  Global("StartEndBios","AR6200",1)
+  InParty("Arath")
+  Global("LK#ArathBio","GLOBAL",0)
+  Global("LK#ArathRomanceActive","GLOBAL",2)
+  Global("PlayerChoseEssence","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathBio","GLOBAL",1)
+    TextScreen("LK#ARAT2")
+END
+
+// Non-romance
+IF
+  Global("StartEndBios","AR6200",1)
+  InParty("Arath")
+  Global("LK#ArathBio","GLOBAL",0)
+  !Global("LK#ArathRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathBio","GLOBAL",1)
+    TextScreen("LK#ARAT3")
+END
+
+

@@ -1,0 +1,257 @@
+// Initial meeting
+IF
+    Global("LK#ArathSummoned","GLOBAL",1)
+    Global("LK#ArathToBIntro","GLOBAL",0)
+THEN
+  RESPONSE #100
+    Dialogue(Player1)
+END
+
+
+// Friendship Dialogues
+IF
+    InParty(Myself)
+    !Global("LK#ArathRomanceActive","GLOBAL",2)
+    Global("LK#ArathToBTalks","GLOBAL",0)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("LK#ArathToBTalksTimer","GLOBAL",1800)
+    SetGlobal("LK#ArathToBTalks","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Arath",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    RealGlobalTimerExpired("LK#ArathToBTalksTimer","GLOBAL")
+    !Global("LK#ArathRomanceActive","GLOBAL",3)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(6)
+      Global("LK#ArathToBTalks","GLOBAL",2)
+      Global("LK#ArathToBTalks","GLOBAL",4)
+      Global("LK#ArathToBTalks","GLOBAL",6)
+      Global("LK#ArathToBTalks","GLOBAL",8)
+      Global("LK#ArathToBTalks","GLOBAL",10)
+      Global("LK#ArathToBTalks","GLOBAL",12)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("LK#ArathToBTalksTimer","GLOBAL")
+    OR(3)
+      Global("LK#ArathToBTalks","GLOBAL",1)
+      Global("LK#ArathToBTalks","GLOBAL",3)
+      Global("LK#ArathToBTalks","GLOBAL",5)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LK#ArathToBTalks","GLOBAL",1)
+END
+
+// sequential 4
+IF
+    InParty(Myself)
+    See(Player1)
+    GlobalGT("PPRoom4","GLOBAL",0)
+    Global("LK#ArathToBTalks","GLOBAL",7)
+    Global("LK#ArathToBGodtalk","GLOBAL",0)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("LK#ArathToBTalksTimer","GLOBAL",900)
+    SetGlobal("LK#ArathToBGodtalk","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("LK#ArathToBTalksTimer","GLOBAL")
+    Global("LK#ArathToBTalks","GLOBAL",7)
+    Global("LK#ArathToBGodtalk","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathToBTalks","GLOBAL",8)
+END
+
+// Number 5
+IF
+    InParty(Myself)
+    See(Player1)
+    GlobalGT("PPRoom5","GLOBAL",0)
+    Global("LK#ArathToBTalks","GLOBAL",9)
+    Global("LK#ArathToBFinaltalk","GLOBAL",0)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("LK#ArathToBTalksTimer","GLOBAL",60)
+    SetGlobal("LK#ArathToBFinaltalk","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("LK#ArathToBTalksTimer","GLOBAL")
+    Global("LK#ArathToBTalks","GLOBAL",9)
+    Global("LK#ArathToBFinaltalk","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathToBTalks","GLOBAL",10)
+END
+
+
+// Romance dialogues
+IF
+    InParty(Myself)
+    Global("LK#ArathRomanceActive","GLOBAL",2)
+    Global("LK#ArathToBLovetalks","GLOBAL",0)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("LK#ArathToBRomanceTimer","GLOBAL",1800)
+    SetGlobal("LK#ArathToBLovetalks","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Arath",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    RealGlobalTimerExpired("LK#ArathToBRomanceTimer","GLOBAL")
+    Global("LK#ArathRomanceActive","GLOBAL",2)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(7)
+      Global("LK#ArathToBLovetalks","GLOBAL",2)
+      Global("LK#ArathToBLovetalks","GLOBAL",4)
+      Global("LK#ArathToBLovetalks","GLOBAL",6)
+      Global("LK#ArathToBLovetalks","GLOBAL",10)
+      Global("LK#ArathToBLovetalks","GLOBAL",12)
+      Global("LK#ArathToBLovetalks","GLOBAL",14)
+      Global("LK#ArathToBSaradush","GLOBAL",2)
+THEN
+  RESPONSE #100
+    PlaySong(0)
+    PlaySound("lk#arrom")
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Arath",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    RealGlobalTimerExpired("LK#ArathToBRomanceTimer","GLOBAL")
+    Global("LK#ArathRomanceActive","GLOBAL",2)
+    CombatCounter(0)
+    !See([ENEMY])
+    OR(4)
+      Global("LK#ArathToBLovetalks","GLOBAL",1)
+      Global("LK#ArathToBLovetalks","GLOBAL",3)
+      Global("LK#ArathToBLovetalks","GLOBAL",5)
+      Global("LK#ArathToBLovetalks","GLOBAL",11)
+THEN
+  RESPONSE #100
+    IncrementGlobal("LK#ArathToBLovetalks","GLOBAL",1)
+END
+
+
+// Talk 5 on waking
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Arath",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    Global("LK#ArathRomanceActive","GLOBAL",2)
+    PartyRested()
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("LK#ArathToBLovetalks","GLOBAL",9)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathToBLovetalks","GLOBAL",10)
+END
+
+// Final talk
+IF
+    InParty(Myself)
+    See(Player1)
+    GlobalGT("PPRoom5","GLOBAL",0)
+    Global("LK#ArathRomanceActive","GLOBAL",2)
+    Global("LK#ArathToBLovetalks","GLOBAL",13)
+    Global("LK#ArathToBFinaltalk","GLOBAL",0)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("LK#ArathToBRomanceTimer","GLOBAL",60)
+    SetGlobal("LK#ArathToBFinaltalk","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("LK#ArathToBRomanceTimer","GLOBAL")
+    Global("LK#ArathRomanceActive","GLOBAL",2)
+    Global("LK#ArathToBLovetalks","GLOBAL",13)
+    Global("LK#ArathToBFinaltalk","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathToBLovetalks","GLOBAL",14)
+END
+
+
+// Saradush
+IF
+    InParty(Myself)
+    See(Player1)
+    Global("SaradushSacked","GLOBAL",1)
+    Global("LK#ArathRomanceActive","GLOBAL",2)
+    Global("LK#ArathToBSaradush","GLOBAL",0)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("LK#ArathToBSaradushTimer","GLOBAL",900)
+    SetGlobal("LK#ArathToBSaradush","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    RealGlobalTimerExpired("LK#ArathToBSaradushTimer","GLOBAL")
+    Global("LK#ArathToBSaradush","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathToBSaradush","GLOBAL",2)
+END
+
+
+// Post-wraith
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Arath",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    Global("LK#ArathRomanceActive","GLOBAL",2)
+    Global("LK#ArathWraith","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("LK#ArathWraith","GLOBAL",3)
+END
+
+IF
+    InParty(Myself)
+    See(Player1)
+    !StateCheck("Arath",CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    Global("LK#ArathRomanceActive","GLOBAL",2)
+    CombatCounter(0)
+    !See([ENEMY])
+    Global("LK#ArathWraith","GLOBAL",3)
+THEN
+  RESPONSE #100
+    PlaySong(0)
+    PlaySound("lk#arrom")
+    MoveToObject(Player1)
+    Dialogue(Player1)
+END
