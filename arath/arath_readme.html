@@ -310,11 +310,12 @@
         <p class="about">
           Author: K'aeloree
         </p>
+    <p class="about">Languages: English, Russian</p>
         <p class="about">
 
           <a href="http://www.spellholdstudios.net/ie/Arath">Mod Website</a> &#8226;
           <a href="http://www.shsforums.net/forum/624-arath/">Mod Forum</a> &#8226;
-          Version: 4
+          Version: 5
         </p>
         <hr />
         <p class="menu">
@@ -363,15 +364,69 @@
         <a name="installation" id="installation"></a>
         <div class="content">
           <h2>Installation</h2>
-          <h5>PC</h5>
 
-          <p>The Arath NPC is a WeiDU mod, packaged in an extractable .RAR archive. Simply unrar <em>"arath_v3.rar"</em> (<a href="http://www.rarlabs.com">WinRAR</a>) into your Baldur's Gate II directory and run <em>"setup-Arath.exe"</em>.
-          <p>To uninstall, run <em>"setup-Arath.exe"</em> again and select the uninstall option.</p>
+		<h5>Notes</h5>
+
+		<p style="margin-top:2%;">
+			<em>If you've previously installed the mod, remove it before extracting the new version. To do this, run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-arath.exe&nbsp;</span></strong>, uninstall all previously installed components and delete the arath folder.</em>
+		</p>
+		<p>
+			<em>When installing or uninstalling, <strong>do not close the <acronym title="Disk Operating System">DOS</acronym> window</strong> by clicking on the <strong>X</strong> button! Instead, press the <strong>Enter</strong> key whenever instructed to do so.</em>
+		</p>
+		<p>
+			<em><strong>Disable any antivirus</strong> or other memory-resident software before installing this or any other mod. Some (particularly avast and Norton!) have a tendency to report false positives with mod activity, resulting in failed installs.</em>
+		</p>
+		
+		<h5>Enhanced Editions Note</h5>
+
+		<p style="margin-top:2%;">
+			The Enhanced Editions are actively supported games. Please note that every patch update will wipe your current mod setup! If in the middle of a modded game you might want to delay the patch update (if possible) as even after reinstalling the mods, you might not be able to continue with your old savegames. Alternatively, copy the whole game's folder into a new one that can be modded and will stay untouched by game patches. It is important that you install the mod to the language version you are playing the game in. Otherwise, the dialogues of the mod will not show but give error messages.
+		</p><br>
+		
+		<h5>Windows</h5>
+
+		<p style="margin-top:2%;">
+			Extract the contents of the mod to the folder of the game you wish to modify (<em>the folder which contains the "CHITIN.KEY" file</em>). On successful extraction, there should be an arath folder and a setup-arath.exe file in your game folder. To install, simply double-click <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-arath.exe&nbsp;</span></strong> and follow the instructions on screen.
+		</p>
+		<p>
+			Run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-arath.exe&nbsp;</span></strong> in your game folder to reinstall, un-install or otherwise change components.
+		</p></br>
+
+		<h5>Mac OS X</h5>
+
+		<p style="margin-top:2%;">
+			MYMOD for Mac OS X is distributed as a compressed tarball and includes a <acronym title="Weimer Dialogue Utility">WeiDU</acronym> installer.
+		</p>
+		<p>
+			First, extract the files from the tarball into your game directory. On successful extraction, there should be a mymod folder, setup-arath and setup-arath.command files in your game folder. To install, double-click <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-arath.command&nbsp;</span></strong> and follow the instructions on screen.
+		</p>
+		<p>
+			You can run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;setup-arath.command&nbsp;</span></strong> in your game folder to reinstall, un-install or otherwise the components settings.
+		</p></br>
+
+		<h5>Linux</h5>
+
+		<p style="margin-top:2%;">
+			Extract the contents of the mod to the folder of the game you wish to modify.
+		</p>
+		<p>
+			Download the latest Linux version of <a href="https://github.com/WeiDUorg/weidu/releases"><acronym title="Weimer Dialogue Utility">WeiDU</acronym></a> and copy WeiDU and WeInstall to /usr/bin. Then open a terminal and <strong>cd</strong> to your game installation directory.
+		</p>
+		<p>
+			<em>Optional: run 'tolower' and answer 'Y' to both queries. You can avoid running the second option (linux.ini) if you've already ran it once in the same directory. To save time, the archive is already tolowered, so there's no need to run the first option (lowercasing file names) either, if you've extracted only this mod since the last time you lowercased file names. If unsure, running tolower and choosing both options is the safe bet.</em>
+		</p>
+		<p>
+			Run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;WeInstall setup-arath&nbsp;</span></strong> in your game folder to install the mod. Then run <strong><span style="font-family: Courier New;font-size: 100%;border: 1px solid black;background-color: black;color: #deded9;">&nbsp;wine BGMain.exe&nbsp;</span></strong> and start playing.
+		</p><br>
+		
           <h5>Compatibility and Installation Order</h5>
 
-          <p>The Arath NPC mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is compatible with BGII: ToB, BGT, BGII:EE, and EET. If you do encounter an error, please contact K'aeloree (kae@spellholdstudios.net) or alternatively post on the <a href="http://www.shsforums.net/forum/608-Arath/">forums</a>.</p>
+          <p>The Arath NPC mod should be compatible with all WeiDU mods, however, we cannot test every single one. It is compatible with BGII: ToB, BGT, BGII:EE, and EET. If you do encounter an error, please post on the <a href="http://www.shsforums.net/forum/624-arath/">forums</a>.</p>
           <p>Please install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a>.</p>
           <address>
+		  
+		  
+		  
             <span class="footer">Arath NPC &gt; Installation</span> <a href="#top">BACK TO TOP</a>
           </address>
         </div>
@@ -437,9 +492,9 @@
           <p><strong>Q: Does he have any major arguments with other NPCs?</strong><br /> A: Arath does not get along with a variety of NPCs, but will not come to blows with any of them.</p>
           <p><strong>Q: Have you got any plans to expand the mod or add new dialogues?</strong><br /> A: Absolutely! After ToB has been written, there are plans to add both voicing and player initiated dialogue.</p>
           <p><strong>Q: Speaking of which, where are they?!</strong><br /> A: Due to time constraints, PID had to be cut from the initial release. It will definitely make it into a future release!</p>
-          <p><strong>Q: I've got an idea for something I think you should add!</strong><br /> A: Great! Send your idea to me and I'd be happy to see what I can do.</p>
-          <p><strong>Q: I'd like to translate Arath into another language, can you TRAify the mod?</strong><br /> A: I generally leave the first few releases of a mod un-TRAified because dialogue errors are easier to spot that way, but if you really want to translate the mod I'd be happy to TRAify it. Just let me know.</p>
-          <p><strong>Q: Crossmod?</strong><br /> A:  Crossmod will definitely be added in future versions.</p>
+          <p><strong>Q: I've got an idea for something I think you should add!</strong><br /> A: I'm afraid the mod is closed content wise [this reply was adjusted by jastey].</p>
+          <p><strong>Q: I'd like to translate Arath into another language.</strong><br /> A: That's great! Please post into the forum so we and other potential translators know, and send us the finished tra files once you are done.</p>
+          <p><strong>Q: Crossmod?</strong><br /> A:  Crossmod will definitely be added in future versions, although probably more likely to the Crossmod Banter Pack.</p>
           <p><strong>Q: Can I write crossmod with Arath?</strong><br /> A: Sure, like all of my NPCs Arath is free for anyone to write crossmod with--you don't need my permission to do so or anything ridiculous like that. If you'd like me to check over your banter(s), I'd be happy to.</p>
           <address>
             <span class="footer">Arath NPC &gt; FAQ</span> &#8226;<a href="#top">BACK TO TOP</a>
@@ -461,11 +516,11 @@
           <hr class="floatfix" />
           <h5>Programs/tools used in creation:</h5><br />
           <ul>
-            <li><a href="http://www.weidu.org">WeiDU</a>, by Westley Weimer/Valerio Bigiani (the bigg)</li>
-            <li><a href="http://www.idi.ntnu.no/~joh/ni/">Near Infinity</a>, by Jon Olav Hauglid</li>
+            <li><a href="https://github.com/WeiDUorg/weidu/releases/latest">WeiDU</a>, originally by Westley Weimer/Valerio Bigiani (the bigg)</li>
+            <li><a href="https://forums.beamdog.com/discussion/30593/new-versions-of-nearinfinity-available/p1">Near Infinity</a><, originally by Jon Olav Hauglid</li>
             <li><a href="http://www.shsforums.net/topic/31285-infinity-explorer-v085/">Infinity Explorer</a>, by Dmitry Jemerov/bigmoshi</li>
             <li><a href="http://www.rarlab.com/">WinRAR</a>, by Eugene Roshal/Alexander Roshal</li>
-            <li><a href="http://iesdp.gibberlings3.net">IESDP</a>, maintained by igi</li>
+            <li><a href="https://gibberlings3.github.io/iesdp/index.htm">IESDP</a></li>
           </ul>
           <h5>Copyright Notice:</h5>
           <div class="important">
@@ -486,6 +541,13 @@
 
         <div class="content">
           <h2>Version history</h2>
+          <h6>30th July 2020 - Version 5:</h6>
+          <ul>
+            <li>Russian version by Ghyn added.</li>
+            <li>Corrected Arath's cre file (removed Bhaalspawn Innates and "export allowed" and "been in party" flags; changed stats to specifications in readme).</li>
+            <li>Replaced healing potions in his inventory with normal ones that can be stacked with the others.</li>
+            <li>Arath will receive XP to level to the PC's level upon first joining (up to 3,000,000 XP)</li>
+          </ul>
           <h6>6th February 2018 - Version 4:</h6>
           <ul>
             <li>Fixed instance where romance would not set to committed in the morning after dialogue</li>

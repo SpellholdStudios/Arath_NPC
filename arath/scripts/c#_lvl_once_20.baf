@@ -1,0 +1,343 @@
+/* NPC levels up to the PC's XP level if taken into the group 
+
+- up to level 20  
+
+C# is jastey's prefix. Do not use it elsewhere for your mod. */
+
+/* Level 20 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",20)
+	XPGT(Player1,2999999)
+	XPLT(Myself,3000000)
+	XPGT(Myself,2749999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",20)	
+		AddXPObject(Myself,250000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 19 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",19)
+	XPGT(Player1,2749999)
+	XPLT(Myself,2750000)
+	XPGT(Myself,2499999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",19)	
+		AddXPObject(Myself,250000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 18 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",18)
+	XPGT(Player1,2499999)
+	XPLT(Myself,2500000)
+	XPGT(Myself,2249999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",18)	
+		AddXPObject(Myself,250000)
+		SetInterrupt(TRUE)
+END
+
+
+/* Level 17 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",17)
+	XPGT(Player1,2249999)
+	XPLT(Myself,2250000)
+	XPGT(Myself,1999999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",17)	
+		AddXPObject(Myself,250000)
+		SetInterrupt(TRUE)
+END
+
+
+/* Level 16 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",16)
+	XPGT(Player1,1999999)
+	XPLT(Myself,2000000)
+	XPGT(Myself,1749999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",16)	
+		AddXPObject(Myself,250000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 15 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",15)
+	XPGT(Player1,1749999)
+	XPLT(Myself,1750000)
+	XPGT(Myself,1499999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",15)	
+		AddXPObject(Myself,250000)
+		SetInterrupt(TRUE)
+END
+
+
+/* Level 14 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",14)
+	XPGT(Player1,1499999)
+	XPLT(Myself,1500000)
+	XPGT(Myself,1249999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",14)	
+		AddXPObject(Myself,250000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 13 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",13)
+	XPGT(Player1,1249999)
+	XPLT(Myself,1250000)
+	XPGT(Myself,999999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",13)	
+		AddXPObject(Myself,250000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 12 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",12)
+	XPGT(Player1,999999)
+	XPLT(Myself,1000000)
+	XPGT(Myself,749999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",12)	
+		AddXPObject(Myself,250000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 11 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",11)
+	XPGT(Player1,749999)
+	XPLT(Myself,750000)
+	XPGT(Myself,499999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",11)	
+		AddXPObject(Myself,250000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 10 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",10)
+	XPGT(Player1,499999)
+	XPLT(Myself,500000)
+	XPGT(Myself,249999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",10)	
+		AddXPObject(Myself,250000)
+		SetInterrupt(TRUE)
+END
+
+
+
+/* Level 9 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",9)
+	XPGT(Player1,249999)
+	XPLT(Myself,250000)
+	XPGT(Myself,124999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",9)	
+		AddXPObject(Myself,125000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 8 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",8)
+	XPGT(Player1,124999)
+	XPLT(Myself,125000)
+	XPGT(Myself,63999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",8)	
+		AddXPObject(Myself,61000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 7 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",7)
+	XPGT(Player1,63999)
+	XPLT(Myself,64000)
+	XPGT(Myself,31999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",7)	
+		AddXPObject(Myself,32000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 6 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",6)
+	XPGT(Player1,31999)
+	XPLT(Myself,32000)
+	XPGT(Myself,15999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",6)	
+		AddXPObject(Myself,16000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 5 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",5)
+	XPGT(Player1,15999)
+	XPLT(Myself,16000)
+	XPGT(Myself,7999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",5)	
+		AddXPObject(Myself,8000)
+		SetInterrupt(TRUE)
+END
+
+
+/* Level 4 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",4)
+	XPGT(Player1,7999)
+	XPLT(Myself,8000)
+	XPGT(Myself,3999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",4)	
+		AddXPObject(Myself,4000)
+		SetInterrupt(TRUE)
+END
+
+
+/* Level 3 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) GlobalLT("C#LevelUp","LOCALS",3)
+	XPGT(Player1,3999)
+	XPLT(Myself,4000)
+	XPGT(Myself,1999)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",3)	
+		AddXPObject(Myself,2000)
+		SetInterrupt(TRUE)
+END
+
+/* Level 2 */
+
+IF
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0) Global("C#LevelUp","LOCALS",0)
+	XPGT(Player1,1999)
+	XPLT(Myself,2000)
+	CheckStat(Player1, 0, LEVELDRAIN)
+THEN
+  RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("C#LevelUp","LOCALS",2)	
+		AddXPObject(Myself,2000)
+		SetInterrupt(TRUE)
+END
+
+IF 
+	InParty(Myself)
+	Global("C#BE_LevelUp","LOCALS",0)
+THEN
+  RESPONSE #100
+		SetGlobal("C#BE_LevelUp","LOCALS",1)
+END
+

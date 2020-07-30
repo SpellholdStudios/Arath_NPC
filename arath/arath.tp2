@@ -5,7 +5,7 @@
 BACKUP ~arath/backup~
 //AUTHOR ~K'aeloree (kae@spellholdstudios.net)~
 SUPPORT ~http://www.shsforums.net/forum/624-arath/~
-VERSION ~v4~ 
+VERSION ~v5~ 
 README ~arath/arath_readme.html~
 //MODDER
 
@@ -42,12 +42,16 @@ AUTO_TRA ~arath/translations/%s~
 LANGUAGE ~English~
          ~english~
          ~arath/translations/english/setup.tra~
+LANGUAGE ~Russian (by Ghyn)~
+         ~russian~
+         ~arath/translations/russian/setup.tra~
 
 // --------------------------------------------
 // Arath NPC Mod 
 // --------------------------------------------
 // Component setup
-BEGIN @1
+BEGIN @1 
+DESIGNATED 0 LABEL arath_npc
 //  REQUIRE_PREDICATE GAME_IS ~tob bgt bg2ee~ @2
 //  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~mel01.cre~ @2
   REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @2
@@ -391,8 +395,10 @@ COMPILE ~arath/dialogue/lk#ar25p.d~
 
 // Compiling scripts...
 COMPILE EVALUATE_BUFFER ~arath/scripts/lk#arath.baf~
+EXTEND_BOTTOM ~lk#arath.bcs~ ~arath/scripts/c#_lvl_once_20.baf~
 COMPILE ~arath/scripts/lk#aratd.baf~
 COMPILE ~arath/scripts/lk#ar25.baf~
+EXTEND_BOTTOM ~lk#ar25.bcs~ ~arath/scripts/c#_lvl_once_20.baf~
 COMPILE ~arath/scripts/lk#ar25d.baf~
 COMPILE ~arath/scripts/lk#artr1.baf~
 COMPILE ~arath/scripts/lk#artr2.baf~
@@ -525,3 +531,4 @@ ACTION_IF GAME_IS ~eet~ BEGIN
 END ELSE BEGIN
   COMPILE ~arath/dialogue/lk#ar25_FATESP.d~ USING ~arath/translations/%LANGUAGE%/lk#ar25.tra~
 END
+
