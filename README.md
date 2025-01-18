@@ -1,3 +1,9 @@
+<hr>
+
+:warning: **The maintenance and support of this project has been moved to a [new repository](https://github.com/Spellhold-Studios/Arath-NPC).**
+
+<hr><br>
+
 ![Latest Release](https://img.shields.io/github/v/release/spellholdstudios/Arath_NPC?include_prereleases&color=darkred)<a name="top" id="top">
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20Mac%20%7C%20linux&color=informational)
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20Russian&color=limegreen)
